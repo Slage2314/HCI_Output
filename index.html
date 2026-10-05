@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Member User ID Registration</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="title">
+            Online Member User ID Registration
+        </div>
+
+        <div class="line"></div>
+
+        <p class="required-note">
+            *Required Field
+        </p>
+
+        <p class="instruction">
+            Please supply the following information as reported to the Social Security System
+        </p>
+
+        <form id="detailsForm">
+
+            <div class="form-row">
+                <label>* CRN / SS Number</label>
+                <span class="colon">:</span>
+                <input type="text" id="ssNumber" required>
+            </div>
+
+            <p class="red-message">
+                If your email address is other than yahoo.com
+            </p>
+
+            <div class="form-row">
+                <label>* Email Address</label>
+                <span class="colon">:</span>
+                <input type="email" id="email" required>
+            </div>
+
+            <div class="form-row">
+                <label>* Confirm Email Address</label>
+                <span class="colon">:</span>
+                <input type="email" id="confirmEmail" required>
+            </div>
+
+            <p class="red-message">
+                Length must be 8-20 characters. First character must be alphabetic. No special characters except underscore. (Ex. Juan_Cruz1234)
+            </p>
+
+            <div class="form-row">
+                <label>* Preferred User ID</label>
+                <span class="colon">:</span>
+                <input type="text" id="userID" required>
+            </div>
+
+            <div class="form-row">
+                <label>* Confirm Preferred User ID</label>
+                <span class="colon">:</span>
+                <input type="text" id="confirmUserID" required>
+            </div>
+
+            <p class="red-message">
+                The following characters are not allowed:
+                # % ( ) \ = ' " | &amp; &lt; &gt; ?
+            </p>
+
+            <div class="form-row">
+                <label>* Surname/Last Name</label>
+                <span class="colon">:</span>
+                <input type="text" id="lastName" required>
+            </div>
+
+            <div class="form-row">
+                <label>* Given Name</label>
+                <span class="colon">:</span>
+                <input type="text" id="firstName" required>
+            </div>
+
+            <div class="form-row">
+                <label>Middle Name</label>
+                <span class="colon">:</span>
+                <input type="text" id="middleName">
+            </div>
+
+            <div class="form-row">
+                <label>* Date of Birth</label>
+                <span class="colon">:</span>
+                <input type="date" id="birthdate" required>
+            </div>
+
+            <div class="form-row">
+                <label>Age</label>
+                <span class="colon">:</span>
+                <input type="number" id="age" readonly>
+            </div>
+
+            <div class="address-title">
+                * Mailing Address (Philippine Address)
+            </div>
+
+            <div class="form-row">
+                <label>Room / Floor / Unit No. &amp; Building Name</label>
+                <span class="colon">:</span>
+                <input type="text" id="room">
+            </div>
+
+            <div class="form-row">
+                <label>House / Lot &amp; Block No.</label>
+                <span class="colon">:</span>
+                <input type="text" id="houseLot">
+            </div>
+
+            <div class="form-row">
+                <label>Street</label>
+                <span class="colon">:</span>
+                <input type="text" id="street">
+            </div>
+
+            <div class="form-row">
+                <label>Subdivision</label>
+                <span class="colon">:</span>
+                <input type="text" id="subdivision">
+            </div>
+
+            <div class="location-choice">
+                <label>
+                    <input type="radio" name="locationType" value="Metro Manila" checked>
+                    Metro Manila
+                </label>
+
+                <label>
+                    <input type="radio" name="locationType" value="Province">
+                    Province
+                </label>
+            </div>
+
+            <div class="form-row">
+                <label>Barangay</label>
+                <span class="colon">:</span>
+                <input type="text" id="barangay">
+            </div>
+
+            <div class="form-row">
+                <label>Municipality / City</label>
+                <span class="colon">:</span>
+                <input type="text" id="municipality">
+            </div>
+
+            <div class="form-row">
+                <label>Province</label>
+                <span class="colon">:</span>
+                <input type="text" id="province">
+            </div>
+
+            <div class="form-row">
+                <label>ZIP Code</label>
+                <span class="colon">:</span>
+                <input type="text" id="zipCode">
+            </div>
+
+            <div class="form-row">
+                <label>* Mobile Number</label>
+                <span class="colon">:</span>
+                <input type="tel" id="number" required>
+            </div>
+
+            <div class="form-row">
+                <label>* Password</label>
+                <span class="colon">:</span>
+                <input type="password" id="password" required>
+            </div>
+
+            <p id="error"></p>
+
+            <div class="button-container">
+                <button type="submit">Submit</button>
+                <button type="reset" id="resetButton">Clear</button>
+            </div>
+
+        </form>
+
+        <div id="output">
+
+            <h3>Registration Details</h3>
+
+            <p><strong>SS Number:</strong> <span id="out-ssNumber"></span></p>
+
+            <p><strong>Email:</strong> <span id="out-email"></span></p>
+
+            <p><strong>User ID:</strong> <span id="out-userID"></span></p>
+
+            <p><strong>Name:</strong> <span id="out-name"></span></p>
+
+            <p><strong>Date of Birth:</strong> <span id="out-birthdate"></span></p>
+
+            <p><strong>Age:</strong> <span id="out-age"></span></p>
+
+            <p><strong>Mobile:</strong> <span id="out-number"></span></p>
+
+            <p><strong>Address:</strong> <span id="out-address"></span></p>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
